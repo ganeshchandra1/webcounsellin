@@ -1,0 +1,81 @@
+<html>
+	<head>
+		
+		<title>Student Results</title>
+
+		<script type="text/javascript">
+		
+		function getReport(){
+
+					var grade = "";	 //declare a variable for grade
+					var  result="";	 //declare a variable for result
+
+					//read the marks
+					var cnMarks = document.getElementById('txtCn').value;
+					var osMarks = document.getElementById('txtOs').value;
+					var mathsMarks = document.getElementById('txtMaths').value;
+					var mcaMarks = document.getElementById('txtMca').value;
+					
+					//calculate the total marks (using double notation technique)
+					var totalMarks = cnMarks - (- osMarks) - (- mathsMarks) - (- mcaMarks);
+					
+					//get the average marks
+					var averageMarks = totalMarks / 4;					
+					
+					//find the grade and result using the ternary operator inside the switch statement					
+					switch(
+					
+							//usage of ternary operator inside switch
+
+							(averageMarks > 60 && averageMarks <= 100) ? 1 : 
+							(averageMarks > 50 && averageMarks < 60) ? 2 : 
+							(averageMarks > 40 && averageMarks < 50) ? 3 : 0
+						  )
+							
+							{
+								case 1 :grade = "10";result="First Class";break;
+								case 2 :grade = "9"; result="Second Class";break;
+								case 3 :grade = "8"; result="Third Class";break;
+								case 0 :grade = "7"; result="Fail";break;
+							}
+							
+						
+					//display the results	
+					document.getElementById('txtStudentName').value = document.getElementById('txtName').value;
+					document.getElementById('txtStudentClass').value = document.getElementById('txtClass').value;
+					document.getElementById('txtTotalMarks').value = totalMarks;
+					document.getElementById('txtAvgMarks').value = averageMarks;
+					document.getElementById('txtGrade').value = grade;
+					document.getElementById('txtResult').value = result;
+		
+		} //end of function getReport
+		
+		</script>
+	</head>
+	<body>		
+			<fieldset style="width:600px">
+	    		<legend><b>Student Input Section:</b></legend>
+				Name:<input type="text" id="txtName"> &nbsp;&nbsp;
+				Class:<input type="text" id="txtClass"> <br/><br/>
+				<table border="1">
+					<tr><td>ComputerNetworks</td><td><input type="text" id="txtCn"></td></tr>
+					<tr><td>OperatingSystems</td><td><input type="text" id="txtOs"></td></tr>
+					<tr><td>Maths</td><td><input type="text" id="txtMaths"></td></tr>
+					<tr><td>Mca</td><td><input type="text" id="txtMca"></td></tr>				
+				</table><br/><br/>
+				<input type="button" value="Get Result" onClick="getReport();">
+			</fieldset>
+			
+				<h2>Report Card</h2>
+				
+				<table border="1">
+					<tr><td>Name</td><td><input type="text" id="txtStudentName" readonly></td></tr>
+					<tr><td>Class</td><td><input type="text" id="txtStudentClass" readonly></td></tr>
+					<tr><td>Total Marks</td><td><input type="text" id="txtTotalMarks" readonly></td></tr>
+					<tr><td>Average Marks</td><td><input type="text" id="txtAvgMarks" readonly></td></tr>
+					<tr><td>Grade</td><td><input type="text" id="number" readonly></td></tr>
+					<tr><td>Remarks</td><td><input type="text" id="txtResult" readonly></td></tr>
+				</table>
+			
+	</body>
+</html>

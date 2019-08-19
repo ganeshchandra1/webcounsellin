@@ -1,0 +1,95 @@
+
+.clearfix:after{
+     clear: both;
+}
+a{
+     color:#0067ab;
+     text-decoration:none;
+}
+a:hover{
+     text-decoration:underline;
+}
+.form{
+     width: 300px;
+     margin: 0 auto;
+}
+form{
+text-align:center;
+}
+input[type=text]{
+width:20%;
+padding:12px 20px;
+margin: 8px 0;
+box-sizzing:border-box;
+}
+input[type=text]
+{
+border:2px solid green;
+border-radius:4px;
+
+}
+input[type=password]{
+width:20%;
+padding:12px 20px;
+margin: 8px 0;
+box-sizzing:border-box;
+
+}
+input[type=password]
+{
+border:2px solid green;
+border-radius:4px;
+
+}
+
+input[type=email]{
+width:20%;
+padding:12px 20px;
+margin: 8px 0;
+box-sizzing:border-box;
+
+}
+input[type=email]
+{
+border:2px solid green;
+border-radius:4px;
+
+}
+input[type=submit]
+{
+background-color:green;
+border:none;
+color:white;
+margin-top:1px;
+margin-bottom:1px;
+margin-right:1px;
+margin-left:1px;
+position :absolute;
+bottom:18%;
+right:780px;
+width:12%;
+height:7%;
+border-radius:4px;
+font-size:25px;
+}
+
+body
+{
+color:green;
+font-style:normal;
+font-size:25px;
+}
+body,html{
+height:100%;
+margin:0;
+}
+
+form{
+padding-top:350px;
+padding-right:350px;
+
+} 
+
+input[type='submit']:hover {
+     background-color: #024978;
+}
